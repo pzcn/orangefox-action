@@ -1091,8 +1091,8 @@ decrypt_users		<string name="no_space">可用的存储空间不足。</string>
 		<string name="install_queue_magisk_btn">添加 Magisk</string>
 		<string name="hint_ffiles_missing">丢失了一些配置?</string>
 		<string name="hint_ffiles_missing1">Fox插件不可用</string>
-		<string name="hint_ffiles_missing2">OrangeFox不能访问配置文件可以，</string>
-		<string name="hint_ffiles_missing3">尝试挂载/data，如果清除了/data， </string>
+		<string name="hint_ffiles_missing2">OrangeFox不能访问配置文件，可以</string>
+		<string name="hint_ffiles_missing3">尝试挂载/data，如果清除了 /data， </string>
 		<string name="hint_ffiles_missing4">请重新安装OrangeFox。</string>
 		<string name="hide_btn">隐藏提示</string>
 
@@ -1111,9 +1111,9 @@ decrypt_users		<string name="no_space">可用的存储空间不足。</string>
 		<string name="backup_exp_size">预期大小</string>
 		<string name="time_minute">分钟</string>
 		<string name="backup_av">平均时间</string>
-		<string name="backup_av1">您想将速度值重置为默认值吗？</string>
-		<string name="backup_av2">平均时间的预测的准确值将会下降</string>
-		<string name="backup_av3"> </string>
+		<string name="backup_av1">您想将备份速度重置为默认值吗？</string>
+		<string name="backup_av2">重置后，预测平均时间的准确度</string>
+		<string name="backup_av3">将会下降。</string>
 
 		<string name="cust_line_white">使用白色提示线</string>
 		<string name="cust_line_gray">使用灰色提示线</string>
