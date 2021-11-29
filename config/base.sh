@@ -37,7 +37,7 @@ cp $GITHUB_WORKSPACE/res/font.ttf bootable/recovery/gui/theme/extra-languages/fo
 rm -rf bootable/recovery/gui/theme/extra-languages/languages/zh_CH.xml
 cp $GITHUB_WORKSPACE/res/zh_CH.xml bootable/recovery/gui/theme/extra-languages/languages/zh_CH.xml
 
-source device/$DEVICE_NAME.sh || true
+source $GITHUB_WORKSPACE/config/device/$DEVICE_NAME.sh || true
 
 if [[ $DEVICE_BRANCH =~ 11 ]]; then
     export TARGET_VERSION=R
