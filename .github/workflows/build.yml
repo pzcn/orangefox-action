@@ -55,8 +55,6 @@ jobs:
     - name: Prepare environment
       run: |
         export HOME=${GITHUB_WORKSPACE}
-        export DEVICE_NAME=${{ github.event.inputs.DEVICE_NAME }}
-        export DEVICE_BRANCH=${{ github.event.inputs.DEVICE_BRANCH }}
         cd ${GITHUB_WORKSPACE}
         sudo apt -y install git aria2 
         git clone https://gitlab.com/OrangeFox/misc/scripts
@@ -79,6 +77,8 @@ jobs:
         
     - name: Building
       run: |
+        export DEVICE_NAME=${{ github.event.inputs.DEVICE_NAME }}
+        export DEVICE_BRANCH=${{ github.event.inputs.DEVICE_BRANCH }}
         cd ${GITHUB_WORKSPACE}/fox_11.0
         source ${GITHUB_WORKSPACE}/config/base.sh
         source build/envsetup.sh || true
