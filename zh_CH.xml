@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <language>
-	<display>Simplified Chinese</display>
+	<display>Chinese Simplified</display>
 
 	<resources>
 		<!-- Font overrides - only change these if your language requires special characters -->
-		<resource name="status" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="bigfont" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="body1" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="body2" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="subhead" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="title" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="mainbutton" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="button" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="menu" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="input_fail" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="splash" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
+		<resource name="status" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="bigfont" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="body1" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="body2" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="subhead" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="title" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="mainbutton" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="button" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="menu" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="input_fail" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="splash" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
 
-		<resource name="font_l" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="font_m" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="font_s" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="font_b" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
+		<resource name="font_l" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="font_m" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="font_s" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="font_b" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
 
-		<resource name="keylabel" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="keylabel-bold" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="keylabel-num" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="keylabel-small" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="keylabel-longpress" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
+		<resource name="keylabel" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="keylabel-bold" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="keylabel-num" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="keylabel-small" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="keylabel-longpress" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
 		
-		<resource name="Secondary" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="Secondary-title" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="caption" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
+		<resource name="Secondary" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="Secondary-title" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="caption" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
 		
-		<resource name="clock" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
-		<resource name="info" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
+		<resource name="clock" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
+		<resource name="info" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
 
 		<resource name="fixed" type="fontoverride" filename="DroidSansFallback.ttf" scale="95" />
-		<resource name="orangefont" type="fontoverride" filename="DroidSansFallback.ttf" scale="95"/>
+		<resource name="orangefont" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
 
 		<!-- Partition display names -->
 		<string name="system">System</string>
@@ -404,7 +404,7 @@
 		<string name="installing">正在安装...</string>
 		<string name="install_complete">安装完成</string>
 		<string name="decrypt_users">解密Users</string>
-		<string name="backup_storage_undecrypt_warning">Backup does not include some files of user {1}, because the user is not decrypted.</string>
+		<string name="backup_storage_undecrypt_warning">备份不包含用户 {1} 的一些文件，因为这个用户处于加密状态。</string>
 		<string name="decrypting_user_fbe">尝试对用户 {1} 进行FBE解密...</string>
 		<string name="decrypt_user_success_fbe">用户 {1} 解密成功</string>
 		<string name="decrypt_user_fail_fbe">用户 {1} 解密失败</string>
@@ -434,7 +434,7 @@
 		<string name="total_backup_size"> * 数据总大小：{1}MB</string>
 		<string name="available_space"> * 可用空间：{1}MB</string>
 		<string name="unable_locate_storage">无法定位存储设备。</string>
-decrypt_users		<string name="no_space">可用的存储空间不足。</string>
+        <string name="no_space">可用的存储空间不足。</string>
 		<string name="backup_started">[开始备份]</string>
 		<string name="backup_folder"> * 备份文件夹：{1}</string>
 		<string name="fail_backup_folder">建立备份文件夹失败。</string>
@@ -812,12 +812,12 @@ decrypt_users		<string name="no_space">可用的存储空间不足。</string>
 		<string name="enabled">已启用</string>
 		<string name="zip_compatible_err">Zip Treble 兼容性错误!</string>
 		
-		<string name="unmount_sys_install">安装一个ZIP之前取消挂载System</string>
+		<string name="unmount_sys_install">安装一个zip文件之前取消挂载System</string>
 		<string name="unmount_system">取消挂载System...</string>
 		<string name="unmount_system_err">无法取消挂载System</string>		
 
-		<string name="unmount_vendor_install">安装一个ZIP之前取消挂载vendor</string>
-		<string name="unmount_vendor">取消挂载...</string>
+		<string name="unmount_vendor_install">安装一个zip文件之前取消挂载Vendor</string>
+		<string name="unmount_vendor">取消挂载Vendor...</string>
 		<string name="unmount_vendor_err">无法取消挂载Vendor</string>	
 
 		<string name="fbe_wipe_msg">警告: {1} 已清除，FBE设备应该会在清除后进入Android系统而不是Recovery以进行FBE规则的初始化。</string>		
@@ -886,6 +886,8 @@ decrypt_users		<string name="no_space">可用的存储空间不足。</string>
 		<string name="fox_files_not_exist_1">文件不存在！</string>
 		<string name="fox_files_not_exist_2">请使用这个安装文件</string>
 		<string name="fox_files_not_exist_3">重新刷入 Recovery。</string>
+		<string name="module_of_set">备份OrangeFox设置</string>
+		<string name="module_remove_survival">移除所有存活脚本</string>
 
 		<!-- Customization -->
 		<string name="cust_new_ota_screen">运行 OTA 更新时显示更少的细节</string>
@@ -1091,8 +1093,8 @@ decrypt_users		<string name="no_space">可用的存储空间不足。</string>
 		<string name="install_queue_magisk_btn">添加 Magisk</string>
 		<string name="hint_ffiles_missing">丢失了一些配置?</string>
 		<string name="hint_ffiles_missing1">Fox插件不可用</string>
-		<string name="hint_ffiles_missing2">OrangeFox不能访问配置文件可以，</string>
-		<string name="hint_ffiles_missing3">尝试挂载/data，如果清除了/data， </string>
+		<string name="hint_ffiles_missing2">OrangeFox不能访问配置文件，可以</string>
+		<string name="hint_ffiles_missing3">尝试挂载/data，如果清除了 /data， </string>
 		<string name="hint_ffiles_missing4">请重新安装OrangeFox。</string>
 		<string name="hide_btn">隐藏提示</string>
 
@@ -1111,9 +1113,9 @@ decrypt_users		<string name="no_space">可用的存储空间不足。</string>
 		<string name="backup_exp_size">预期大小</string>
 		<string name="time_minute">分钟</string>
 		<string name="backup_av">平均时间</string>
-		<string name="backup_av1">您想将速度值重置为默认值吗？</string>
-		<string name="backup_av2">平均时间的预测的准确值将会下降</string>
-		<string name="backup_av3"> </string>
+		<string name="backup_av1">您想将备份速度重置为默认值吗？</string>
+		<string name="backup_av2">重置后，预测平均时间的准确度</string>
+		<string name="backup_av3">将会下降。</string>
 
 		<string name="cust_line_white">使用白色提示线</string>
 		<string name="cust_line_gray">使用灰色提示线</string>
