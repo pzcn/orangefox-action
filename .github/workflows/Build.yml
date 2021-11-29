@@ -103,5 +103,4 @@ jobs:
       with:
         path: |
           fox_11.0/out/target/product/${{ github.event.inputs.DEVICE_PATH }}/OrangeFox*.zip
-          
         name: ${{ github.event.inputs.DEVICE_NAME }}_$(TZ=UTC-8 date +%m%d)_${TARGET_VERSION}
