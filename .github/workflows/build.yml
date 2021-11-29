@@ -55,6 +55,8 @@ jobs:
     - name: Prepare environment
       run: |
         export HOME=${GITHUB_WORKSPACE}
+        export DEVICE_NAME=${{ github.event.inputs.DEVICE_NAME }}
+        export DEVICE_BRANCH=${{ github.event.inputs.DEVICE_BRANCH }}
         cd ${GITHUB_WORKSPACE}
         sudo apt -y install git aria2 
         git clone https://gitlab.com/OrangeFox/misc/scripts
@@ -75,24 +77,10 @@ jobs:
         cd ${GITHUB_WORKSPACE}/fox_11.0
         git clone ${{ github.event.inputs.DEVICE_URL }} -b ${{ github.event.inputs.DEVICE_BRANCH }} device/xiaomi/${{ github.event.inputs.DEVICE_PATH }}
         
-    - name: Set Build Config
-      run: |
-        cd ${GITHUB_WORKSPACE}/fox_11.0
-        source ${GITHUB_WORKSPACE}/config/base.sh
-        source ${GITHUB_WORKSPACE}/config/device/${{ github.event.inputs.DEVICE_NAME }}.sh || true
-        if ${{ github.event.inputs.DEVICE_BRANCH }} =~ 11
-        export TARGET_VERSION=R
-        elif ${{ github.event.inputs.DEVICE_BRANCH }} =~ 12
-        export TARGET_VERSION=S
-        source ${GITHUB_WORKSPACE}/config/spatch.sh
-        else 
-        TARGET_VERSION=${{ github.event.inputs.DEVICE_BRANCH }}
-        fi
-        export FOX_VERSION=$(TZ=UTC-8 date +%m%d)_${TARGET_VERSION}
-
     - name: Building
       run: |
         cd ${GITHUB_WORKSPACE}/fox_11.0
+        source ${GITHUB_WORKSPACE}/config/base.sh
         source build/envsetup.sh || true
         lunch ${{ github.event.inputs.LIBRARY_BRANCH }}_${{ github.event.inputs.DEVICE_NAME }}-eng
         make clean

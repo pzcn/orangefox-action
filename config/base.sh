@@ -35,4 +35,16 @@ rm -rf bootable/recovery/gui/theme/extra-languages/fonts/DroidSansFallback.ttf
 cp $GITHUB_WORKSPACE/res/font.ttf bootable/recovery/gui/theme/extra-languages/fonts/DroidSansFallback.ttf
 
 rm -rf bootable/recovery/gui/theme/extra-languages/languages/zh_CH.xml
-cp $GITHUB_WORKSPACE/res/zh_CH.xml bootable/recovery/gui/theme/extra-languages/languages/zh_CH.xm
+cp $GITHUB_WORKSPACE/res/zh_CH.xml bootable/recovery/gui/theme/extra-languages/languages/zh_CH.xml
+
+source device/${DEVICE_NAME}.sh || true
+
+if ${DEVICE_BRANCH} =~ 11 ; then
+    export TARGET_VERSION=R
+elif ${DEVICE_BRANCH} =~ 12 ; then
+    export TARGET_VERSION=S
+    source spatch.sh
+else 
+    TARGET_VERSION=${DEVICE_BRANCH}
+fi
+    export FOX_VERSION=$(TZ=UTC-8 date +%m%d)_${TARGET_VERSION}

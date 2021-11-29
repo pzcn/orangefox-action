@@ -1,4 +1,4 @@
 export OF_SCREEN_H=2340
 export OF_STATUS_H=120
 export OF_STATUS_INDENT_LEFT=180
-export DEVICE_NAME=Mi10Ultra
+export PRODUCT_NAME=Mi10Ultra
