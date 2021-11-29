@@ -34,7 +34,7 @@
 		<resource name="clock" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
 		<resource name="info" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
 
-		<resource name="fixed" type="fontoverride" filename="DroidSansFallback.ttf" scale="95" />
+		<resource name="fixed" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
 		<resource name="orangefont" type="fontoverride" filename="DroidSansFallback.ttf" scale="100"/>
 
 		<!-- Partition display names -->
