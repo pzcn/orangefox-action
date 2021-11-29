@@ -434,7 +434,7 @@
 		<string name="total_backup_size"> * 数据总大小：{1}MB</string>
 		<string name="available_space"> * 可用空间：{1}MB</string>
 		<string name="unable_locate_storage">无法定位存储设备。</string>
-        <string name="no_space">可用的存储空间不足。</string>
+                <string name="no_space">可用的存储空间不足。</string>
 		<string name="backup_started">[开始备份]</string>
 		<string name="backup_folder"> * 备份文件夹：{1}</string>
 		<string name="fail_backup_folder">建立备份文件夹失败。</string>
