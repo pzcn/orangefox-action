@@ -35,7 +35,7 @@ sed -i "s/fuse_data\* fd, uint32_t/fuse_data\* fd, uint64_t/g" bootable/recovery
 
 rm -rf  system/core/libziparchive
 git clone -b android-12.0.0_r15 --depth=1 https://android.googlesource.com/platform/system/libziparchive system/core/libziparchive
-
+git apply --directory=system/core $GITHUB_WORKSPACE/res/30e4617.diff
 
 rm -rf device/xiaomi/umi/recovery/root/customzip
 
