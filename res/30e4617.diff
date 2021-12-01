@@ -62,7 +62,7 @@ index 8226d39..a20f61f 100644
  }
  
  cc_library {
-@@ -289,27 +281,7 @@
+@@ -289,27 +281,6 @@
      test_suites: ["general-tests"],
      host_supported: true,
      device_supported: false,
