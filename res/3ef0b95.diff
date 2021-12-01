@@ -1,0 +1,30 @@
+From 3ef0b95a47ba0e90fd5797f54733fc10a649c59b Mon Sep 17 00:00:00 2001
+From: luoqiangwei1 <luoqiangwei1@xiaomi.com>
+Date: Thu, 16 Sep 2021 18:25:23 +0800
+Subject: [PATCH] Fix the fuse error that cannot handle the OTA package larger than 4 GiB
+
+1. That read data will be blocked when adb sideload OTA package
+2. An error(Out of bound read) occurs when installing OTA package by fuse
+
+Test: as follows
+    - adb sideload OTA package
+    - install OTA package by install_with_fuse parameter
+
+Change-Id: Ie53510d157f6ea4c92606b289fcb745d441918c8
+Signed-off-by: luoqiangwei1 <luoqiangwei1@xiaomi.com>
+Signed-off-by: GarfieldHan <2652609017@qq.com>
+---
+
+diff --git a/fuse_sideload/fuse_sideload.cpp b/fuse_sideload/fuse_sideload.cpp
+index 3d94803..07cbe96 100644
+--- a/fuse_sideload/fuse_sideload.cpp
++++ b/fuse_sideload/fuse_sideload.cpp
+@@ -225,7 +225,7 @@
+ 
+ // Fetch a block from the host into fd->curr_block and fd->block_data.
+ // Returns 0 on successful fetch, negative otherwise.
+-static int fetch_block(fuse_data* fd, uint32_t block) {
++static int fetch_block(fuse_data* fd, uint64_t block) {
+   if (block == fd->curr_block) {
+     return 0;
+   }

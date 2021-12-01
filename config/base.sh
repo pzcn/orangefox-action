@@ -30,13 +30,13 @@ export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 sed -i "s/TW_H_OFFSET/#TW_H_OFFSET/g" device/xiaomi/umi/BoardConfig.mk
 sed -i "s/TW_Y_OFFSET/#TW_Y_OFFSET/g" device/xiaomi/umi/BoardConfig.mk
 
-sed -i "s/\bZipEntry/ZipEntry64/g" `grep ZipEntry -rl bootable/recovery`
-sed -i "s/fuse_data\* fd, uint32_t/fuse_data\* fd, uint64_t/g" bootable/recovery/fuse_sideload/fuse_sideload.cpp
-
-rm -rf  system/core/libziparchive
-git clone -b android-12.0.0_r15 --depth=1 https://android.googlesource.com/platform/system/libziparchive system/core/libziparchive
 cd system/core
+git apply $GITHUB_WORKSPACE/res/241b851.diff
 git apply $GITHUB_WORKSPACE/res/30e4617.diff
+cd ../..
+cd bootable/recovery
+git apply $GITHUB_WORKSPACE/res/427201b.diff
+git apply $GITHUB_WORKSPACE/res/3ef0b95.diff
 cd ../..
 
 rm -rf device/xiaomi/umi/recovery/root/customzip
