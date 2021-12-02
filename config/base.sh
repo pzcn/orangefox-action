@@ -2,6 +2,7 @@ export ALLOW_MISSING_DEPENDENCIES=true
 export TW_DEFAULT_LANGUAGE="zh_CN"
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 export LC_ALL="C"
+export TARGET_EXFAT_DRIVER := exfat
 
 export FOX_REPLACE_BUSYBOX_PS=1
 export FOX_REPLACE_TOOLBOX_GETPROP=1
@@ -28,6 +29,15 @@ export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 
 sed -i "s/TW_H_OFFSET/#TW_H_OFFSET/g" device/xiaomi/umi/BoardConfig.mk
 sed -i "s/TW_Y_OFFSET/#TW_Y_OFFSET/g" device/xiaomi/umi/BoardConfig.mk
+
+sed -i "s/\bZipEntry/ZipEntry64/g" `grep ZipEntry -rl bootable/recovery`
+sed -i "s/fuse_data\* fd, uint32_t/fuse_data\* fd, uint64_t/g" bootable/recovery/fuse_sideload/fuse_sideload.cpp
+
+rm -rf  system/core/libziparchive
+git clone -b android-12.0.0_r15 --depth=1 https://android.googlesource.com/platform/system/libziparchive system/core/libziparchive
+cd system/core
+git apply $GITHUB_WORKSPACE/res/30e4617.diff
+cd ../..
 
 rm -rf device/xiaomi/umi/recovery/root/customzip
 
