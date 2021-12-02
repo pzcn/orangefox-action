@@ -43,7 +43,7 @@ if [[ $DEVICE_BRANCH =~ 11 ]]; then
     export TARGET_VERSION=R
 elif [[ $DEVICE_BRANCH =~ 12 ]]; then
     export TARGET_VERSION=S
-    source spatch.sh
+    source $GITHUB_WORKSPACE/config/spatch.sh
 else 
     TARGET_VERSION=$DEVICE_BRANCH
 fi
