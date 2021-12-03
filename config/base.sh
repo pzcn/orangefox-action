@@ -30,6 +30,8 @@ export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 sed -i "s/TW_H_OFFSET/#TW_H_OFFSET/g" device/xiaomi/umi/BoardConfig.mk
 sed -i "s/TW_Y_OFFSET/#TW_Y_OFFSET/g" device/xiaomi/umi/BoardConfig.mk
 
+sed -i "s/0xFFFFFFFF/0xFFFFFFFFFFFFFFFF/g" bootable/recovery/mtp/ffs/MtpServer.cpp
+
 sed -i "s/\bZipEntry/ZipEntry64/g" `grep ZipEntry -rl bootable/recovery`
 sed -i "s/fuse_data\* fd, uint32_t/fuse_data\* fd, uint64_t/g" bootable/recovery/fuse_sideload/fuse_sideload.cpp
 
